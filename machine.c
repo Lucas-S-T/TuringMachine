@@ -29,12 +29,15 @@ int create_machine(int tape_size, struct TuringMachine *m, struct InstructionSet
 }
 
 
-int runUntilError(struct TuringMachine *m){
+int runUntilError(struct TuringMachine *m, int print_tape){
 
     int s = 0;
 
    do{
        s = runOnce(m);
+       if(print_tape){
+           printTape(*m);
+       }
    }while (s == 0);
 
    return s;

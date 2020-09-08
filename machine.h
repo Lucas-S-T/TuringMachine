@@ -28,6 +28,6 @@ int setMachineState(struct TuringMachine *m, unsigned long state);
 int setTapeValue(struct TuringMachine *m, unsigned long pos, unsigned long value);
 int printTape(struct TuringMachine m);
 int runOnce(struct TuringMachine *m);
-int runUntilError(struct TuringMachine *m);
+int runUntilError(struct TuringMachine *m, int print_tape);
 
 #endif //TURINGMACHINE_MACHINE_H
